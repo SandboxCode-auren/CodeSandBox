@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 const DOCS_DATA = {
   "gioi-thieu": {
@@ -34,6 +35,7 @@ export default function DocsApp() {
         <h1>{DOCS_DATA[currentSection].title}</h1>
         <p>{DOCS_DATA[currentSection].content}</p>
       </main>
+      <Analytics />
     </div>
   );
 }
